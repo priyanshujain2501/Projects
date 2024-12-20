@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Whenever click on any page then it will be active page and show in console and then we target the active page */
+
+/* .active hr {@apply block;} -> uses Tailwind's @apply directive to make <hr> inside an .active class display as a block-level element (display: block). */
+
+/* It means it apply in hr tag to display block level */
+
+/* @apply is a directive in Tailwind CSS that allows you to use utility classes inside your custom CSS. */
+
+/* 
+Purpose
+To apply one or more Tailwind utility classes within custom CSS selectors.
+Useful when you need to style elements with complex or reusable class combinations. 
+*/
+
+*{
+    font-family: Outfit;
+}
+
+.active hr{
+    @apply block
+} 
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+@media (max-width:740px){
+    .active p{
+        @apply text-white bg-primary
+    }
+}
